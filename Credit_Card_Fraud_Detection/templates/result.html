@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Credit Card Fraud Detection</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="header">
+
+    <h1>💳 Credit Card Fraud Detection Dashboard</h1>
+
+    <p>Machine Learning Project | Random Forest Classifier</p>
+
+</div>
+
+<div class="container">
+
+    <!-- ================= Summary ================= -->
+
+    <div class="card">
+
+        <h2>📊 Prediction Summary</h2>
+
+        <div class="summary">
+
+            <div class="box">
+                <h2>{{ total }}</h2>
+                <p>Total Transactions</p>
+            </div>
+
+            <div class="box">
+                <h2>{{ genuine }}</h2>
+                <p>✅ Genuine</p>
+            </div>
+
+            <div class="box">
+                <h2>{{ fraud }}</h2>
+                <p>🚨 Fraud</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= Metrics ================= -->
+
+    {% if has_actual %}
+
+    <div class="card">
+
+        <h2>📈 Model Performance</h2>
+
+        <table>
+
+            <tr>
+                <th>Metric</th>
+                <th>Value</th>
+            </tr>
+
+            <tr>
+                <td>Accuracy</td>
+                <td>{{ metrics.accuracy }}</td>
+            </tr>
+
+            <tr>
+                <td>Precision</td>
+                <td>{{ metrics.precision }}</td>
+            </tr>
+
+            <tr>
+                <td>Recall</td>
+                <td>{{ metrics.recall }}</td>
+            </tr>
+
+            <tr>
+                <td>F1 Score</td>
+                <td>{{ metrics.f1 }}</td>
+            </tr>
+
+            <tr>
+                <td>ROC AUC</td>
+                <td>{{ metrics.roc }}</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    {% endif %}
+
+    <!-- ================= Charts ================= -->
+
+    <div class="card">
+
+        <h2>📊 Prediction Charts</h2>
+
+        <div style="display:flex;justify-content:space-around;flex-wrap:wrap;">
+
+            <div>
+
+                <h3>Pie Chart</h3>
+
+                <img
+                src="{{ url_for('static', filename='images/pie_chart.png') }}"
+                width="350">
+
+            </div>
+
+            <div>
+
+                <h3>Bar Chart</h3>
+
+                <img
+                src="{{ url_for('static', filename='images/bar_chart.png') }}"
+                width="350">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= Confusion Matrix ================= -->
+
+    {% if has_actual %}
+
+    <div class="card">
+
+        <h2>📉 Confusion Matrix</h2>
+
+        <center>
+
+        <img
+        src="{{ url_for('static', filename='images/confusion_matrix.png') }}"
+        width="500">
+
+        </center>
+
+    </div>
+
+    {% endif %}
+
+    <!-- ================= Table ================= -->
+
+    <div class="card">
+
+        <h2>📋 Prediction Preview (Top 20 Rows)</h2>
+
+        {{ table|safe }}
+
+    </div>
+
+    <!-- ================= Buttons ================= -->
+
+    <div class="card" style="text-align:center;">
+
+        <a href="/download">
+
+            <button>
+
+                ⬇ Download Predictions
+
+            </button>
+
+        </a>
+
+        &nbsp;&nbsp;
+
+        <a href="/">
+
+            <button>
+
+                ⬅ Upload Another File
+
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+<footer style="text-align:center;padding:20px;color:gray;">
+
+Developed by <b>Rohan Battepati</b><br>
+
+CodSoft Data Science Internship
+
+</footer>
+
+</body>
+
+</html>

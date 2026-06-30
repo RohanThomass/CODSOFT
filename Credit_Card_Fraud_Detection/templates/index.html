@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Credit Card Fraud Detection</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="header">
+
+    <h1>💳 Credit Card Fraud Detection Dashboard</h1>
+
+    <p>Machine Learning Project using Random Forest</p>
+
+</div>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>📂 Upload Transaction File</h2>
+
+        <p>
+            Upload a CSV file containing credit card transactions.
+            The system will classify each transaction as
+            <b>Genuine</b> or <b>Fraudulent</b>.
+        </p>
+
+        <form action="/predict"
+              method="POST"
+              enctype="multipart/form-data">
+
+            <input
+                type="file"
+                name="file"
+                accept=".csv"
+                required>
+
+            <br><br>
+
+            <button type="submit">
+                🚀 Analyze Transactions
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="card">
+
+        <h2>📌 About this Project</h2>
+
+        <ul style="text-align:left; line-height:1.8;">
+
+            <li>✔ Detects fraudulent credit card transactions</li>
+
+            <li>✔ Random Forest Machine Learning Model</li>
+
+            <li>✔ Handles class imbalance using SMOTE</li>
+
+            <li>✔ Batch prediction using uploaded CSV files</li>
+
+            <li>✔ Displays analytics dashboard</li>
+
+            <li>✔ Download prediction results as CSV</li>
+
+        </ul>
+
+    </div>
+
+    <div class="card">
+
+        <h2>🛠 Technologies Used</h2>
+
+        <p>
+
+            Python • Flask • Pandas • NumPy •
+            Scikit-learn • Matplotlib • Seaborn • Joblib
+
+        </p>
+
+    </div>
+
+</div>
+
+<footer style="text-align:center;padding:20px;color:gray;">
+
+Developed by <b>Your Name</b><br>
+
+CodSoft Data Science Internship
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Large datasets
+Credit_Card_Fraud_Detection/data/raw/creditcard.csv
+
+# Flask
+Credit_Card_Fraud_Detection/uploads/
+
+# Generated files
+Credit_Card_Fraud_Detection/outputs/
+
+# Models
+Credit_Card_Fraud_Detection/models/*.pkl
+# Large datasets
+Credit_Card_Fraud_Detection/data/raw/creditcard.csv
+Credit_Card_Fraud_Detection/data/processed/
+
+# Generated outputs
+Credit_Card_Fraud_Detection/outputs/
+
+# Uploaded files
+Credit_Card_Fraud_Detection/uploads/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

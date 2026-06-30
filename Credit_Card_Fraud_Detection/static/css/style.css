@@ -1,0 +1,220 @@
+/* ===========================
+   Global Styles
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:#eef2f7;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.header{
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+    color:white;
+    text-align:center;
+    padding:30px;
+    box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+
+.header h1{
+    font-size:2rem;
+    margin-bottom:8px;
+}
+
+.header p{
+    opacity:.9;
+    font-size:1rem;
+}
+
+/* ===========================
+   Container
+=========================== */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:30px auto;
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 24px rgba(0,0,0,.18);
+}
+
+.card h2{
+    margin-bottom:20px;
+    color:#1e3c72;
+}
+
+/* ===========================
+   Upload Form
+=========================== */
+
+input[type=file]{
+    width:100%;
+    padding:12px;
+    border:2px dashed #999;
+    border-radius:8px;
+    background:#fafafa;
+    cursor:pointer;
+}
+
+input[type=file]:hover{
+    border-color:#2563eb;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+button{
+    background:#2563eb;
+    color:white;
+    padding:12px 28px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#1d4ed8;
+    transform:scale(1.03);
+}
+
+/* ===========================
+   Summary Boxes
+=========================== */
+
+.summary{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.box{
+    flex:1;
+    min-width:200px;
+    background:#f8fafc;
+    border-left:6px solid #2563eb;
+    border-radius:10px;
+    padding:20px;
+    text-align:center;
+}
+
+.box h2{
+    color:#2563eb;
+    font-size:2rem;
+}
+
+.box p{
+    margin-top:8px;
+    font-size:1rem;
+}
+
+/* ===========================
+   Tables
+=========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th{
+    background:#2563eb;
+    color:white;
+    padding:12px;
+}
+
+td{
+    padding:10px;
+}
+
+th,
+td{
+    border:1px solid #ddd;
+}
+
+tr:nth-child(even){
+    background:#f8f8f8;
+}
+
+tr:hover{
+    background:#eef5ff;
+}
+
+/* ===========================
+   Images
+=========================== */
+
+img{
+    margin:15px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+    max-width:100%;
+    height:auto;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+    margin-top:40px;
+    padding:20px;
+    text-align:center;
+    color:#666;
+    background:white;
+    box-shadow:0 -2px 8px rgba(0,0,0,.08);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    .summary{
+        flex-direction:column;
+    }
+
+    .box{
+        width:100%;
+    }
+
+    .header h1{
+        font-size:1.6rem;
+    }
+
+    button{
+        width:100%;
+    }
+}
