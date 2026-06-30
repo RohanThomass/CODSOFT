@@ -1,22 +1,37 @@
-# 💳 Credit Card Fraud Detection System
+💳 Credit Card Fraud Detection System
 
-A Machine Learning web application that detects fraudulent credit card transactions using a Random Forest Classifier.
+A Machine Learning-powered Flask web application that detects fraudulent credit card transactions using a **Random Forest Classifier**.
 
----
-
-## 🚀 Features
-
-- Upload CSV file
-- Predict fraudulent transactions
-- Download prediction results
-- Interactive Dashboard
-- Pie Chart & Bar Chart
-- Confusion Matrix
-- Model Evaluation (Accuracy, Precision, Recall, F1 Score, ROC-AUC)
+The application supports **batch prediction using CSV uploads**, displays analytics, and allows users to download prediction results.
 
 ---
 
-## 🛠 Technologies Used
+🌐 Live Demo
+
+**Render Deployment**
+
+[https://YOUR-RENDER-URL.onrender.com](https://codsoft-ohht.onrender.com)
+
+---
+
+🚀 Features
+
+- ✅ Batch prediction using CSV upload
+- ✅ Fraud/Genuine transaction classification
+- ✅ Download prediction results as CSV
+- ✅ Interactive analytics dashboard
+- ✅ Pie Chart & Bar Chart visualization
+- ✅ Confusion Matrix (when actual labels are available)
+- ✅ Automatic evaluation metrics:
+  - Accuracy
+  - Precision
+  - Recall
+  - F1 Score
+  - ROC-AUC
+
+---
+
+🛠 Tech Stack
 
 - Python
 - Flask
@@ -31,82 +46,91 @@ A Machine Learning web application that detects fraudulent credit card transacti
 
 ## 📂 Project Structure
 
-```
-Credit_Card_Fraud_Detection
+```text
+Credit_Card_Fraud_Detection/
 │
 ├── app.py
 ├── train.py
 ├── requirements.txt
-├── README.md
-│
-├── data/
-│   └── raw/
-│       └── creditcard.csv
+├── Procfile
+├── runtime.txt
 │
 ├── models/
 │   ├── fraud_detector.pkl
 │   └── scaler.pkl
 │
-├── outputs/
-│   ├── figures/
-│   ├── reports/
-│   └── predictions.csv
+├── templates/
+│   ├── index.html
+│   └── result.html
 │
 ├── static/
 │   ├── css/
 │   └── images/
 │
-├── templates/
-│   ├── index.html
-│   └── result.html
+├── uploads/
+├── outputs/
 │
-└── uploads/
+└── data/
+    └── raw/
 ```
 
 ---
 
-## 📊 Machine Learning Workflow
+🤖 Machine Learning Pipeline
 
-1. Data Preprocessing
+1. Data Cleaning
 2. Feature Scaling
-3. SMOTE for Class Imbalance
-4. Random Forest Training
-5. Model Evaluation
-6. Flask Deployment
+3. Train-Test Split
+4. SMOTE (Class Imbalance Handling)
+5. Random Forest Training
+6. Model Evaluation
+7. Model Serialization (Joblib)
+8. Flask Deployment
 
 ---
 
-## 📈 Performance Metrics
+📊 Model Performance
 
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- ROC-AUC
+| Metric | Score |
+|---------|------:|
+| Accuracy | Add your value |
+| Precision | Add your value |
+| Recall | Add your value |
+| F1 Score | Add your value |
+| ROC-AUC | Add your value |
 
 ---
 
-## ▶️ How to Run
+#📁 Dataset
 
-### Clone Repository
+The original dataset is **not included** because it exceeds GitHub's file size limit.
+
+Download it from Kaggle:
+
+https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+
+
+⚙ Installation
+
+Clone the repository:
 
 ```bash
-git clone https://github.com/RohanThomass/Credit_Card_Fraud_Detection.git
+git clone https://github.com/RohanThomass/CODSOFT.git
 ```
 
-### Install Dependencies
+Go to the project folder:
+
+```bash
+cd CODSOFT/Credit_Card_Fraud_Detection
+```
+
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Train Model
-
-```bash
-python train.py
-```
-
-### Run Application
+Run the application:
 
 ```bash
 python app.py
@@ -114,20 +138,31 @@ python app.py
 
 Open:
 
-```
+```text
 http://127.0.0.1:5000
 ```
 
 ---
 
-## 📷 Screenshots
 
-(Add screenshots here)
+
+📌 Future Improvements
+
+- User Authentication
+- Docker Support
+- Cloud Storage for Uploaded Files
+- REST API
+- Model Monitoring
+- Explainable AI (SHAP)
 
 ---
 
-## 👨‍💻 Author
-
+👨‍💻 Author
 Rohan Battepati
 
-CodSoft Data Science Internship
+**Rohan Battepati**
+
+Data Science Intern – CodSoft
+
+GitHub:
+https://github.com/RohanThomass
